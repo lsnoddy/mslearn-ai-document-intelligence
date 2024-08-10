@@ -20,8 +20,8 @@ az cognitiveservices account create --kind FormRecognizer --location westus --na
 # Create the Cognitive Search resource
 printf "${GREEN}Setting up Azure Cognitive Search. \n${NORMAL}"
 # Purge any existing search resource with the same name
-az resource delete --ids "/subscriptions/${SubID}/resourceGroups/${resourceGroupName}/providers/Microsoft.Search/searchServices/enrichedcognitivesearch"
+az resource delete --ids "/subscriptions/${SubID}/resourceGroups/${resourceGroupName}/providers/Microsoft.Search/searchServices/enrichedcognitivesearch007"
 # Now, create the new one
-az search service create --name enrichedcognitivesearch --location westus --resource-group $resourceGroupName --sku Free --partition-count 1 --replica-count 1
+az search service create --name enrichedcognitivesearch007 --location westus --resource-group $resourceGroupName --sku Free --partition-count 1 --replica-count 1
 
 printf "${GREEN}Setup completed. \n${NORMAL}"
